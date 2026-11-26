@@ -1,0 +1,171 @@
+
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.forestillinger-page {
+  min-height: 100vh;
+  width: 100%;
+  padding: 35px 20px;
+
+  background-image: url('/theater-background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.forestillinger-panel {
+  width: 100%;
+  max-width: 1150px;
+  min-height: 700px;
+  margin: auto;
+  padding: 25px;
+
+  background: rgba(35, 0, 12, 0.88);
+  border: 2px solid #d4ad69;
+  border-radius: 12px;
+
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.45);
+}
+
+.page-header {
+  display: grid;
+  grid-template-columns: 120px 1fr 100px;
+  align-items: center;
+  gap: 20px;
+  min-height: 115px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #d4ad69;
+}
+
+.theater-logo {
+  width: 120px;
+  height: 85px;
+  overflow: hidden;
+  background: #23000c;
+  border: 2px solid #d4ad69;
+  border-radius: 5px;
+}
+
+.theater-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.page-header h1 {
+  color: #f1cf86;
+  text-align: center;
+  font-size: 38px;
+  margin: 0;
+}
+
+.admin-label {
+  color: #f5e8d0;
+  text-align: right;
+  font-size: 15px;
+}
+
+.forestiling-list {
+  margin-top: 30px;
+}
+
+.forestilling-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.forestilling-card {
+  min-height: 245px;
+  padding: 15px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  background: rgba(255, 248, 235, 0.96);
+  border: 2px solid #d4ad69;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.image-placeholder {
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #f5e8d0;
+  border: 1px solid #d4ad69;
+  color: #26000c;
+  font-size: 17px;
+}
+
+.forestilling-card h3 {
+  min-height: 45px;
+  margin: 12px 0;
+  color: #26000c;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.forestilling-card button {
+  align-self: flex-end;
+  margin-top: auto;
+  padding: 9px 15px;
+
+  background: #c69b50;
+  color: #26000c;
+  border: 1px solid #d4ad69;
+  border-radius: 20px;
+
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.forestilling-card button:hover {
+  background: #e1bd78;
+}
+
+@media (max-width: 750px) {
+  .forestilling-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .page-header {
+    grid-template-columns: 85px 1fr 55px;
+    gap: 10px;
+  }
+
+  .theater-logo {
+    width: 85px;
+    height: 70px;
+  }
+
+  .page-header h1 {
+    font-size: 27px;
+  }
+}
+
+@media (max-width: 500px) {
+  .forestilling-list {
+    grid-template-columns: 1fr;
+  }
+
+  .forestillinger-panel {
+    padding: 15px;
+  }
+
+  .page-header h1 {
+    font-size: 22px;
+  }
+}
