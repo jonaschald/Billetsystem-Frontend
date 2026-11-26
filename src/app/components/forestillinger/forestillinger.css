@@ -96,16 +96,11 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.image-placeholder {
-  height: 120px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  background: #f5e8d0;
-  border: 1px solid #d4ad69;
-  color: #26000c;
-  font-size: 17px;
+.forestilling-billede {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
 }
 
 .forestilling-card h3 {

@@ -1,7 +1,5 @@
 <div class="forestillinger-page">
-
   <main class="forestillinger-panel">
-
     <header class="page-header">
 
       <div class="theater-logo">
@@ -25,23 +23,16 @@
       }
 
       @for (forestilling of forestillinger(); track forestilling.id) {
-
         <article class="forestilling-card">
-
-          <div class="image-placeholder">Billede</div>
-
+          <img class="forestilling-billede"
+               [src]="forestilling.billedeUrl"
+               [alt]="forestilling.titel">
           <h3>{{ forestilling.titel }}</h3>
-
           <p>{{ forestilling.kortBeskrivelse }}</p>
-
           <button>Bestil billetter</button>
-
         </article>
-
       }
 
     </section>
-
   </main>
-
 </div>

@@ -5,4 +5,5 @@ export interface Forestilling {
   kortBeskrivelse: string;
   beskrivelse: string;
   salgsType: number;
+  billedeUrl: string;
 }
