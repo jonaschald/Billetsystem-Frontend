@@ -1,7 +1,7 @@
-
 import { Routes } from '@angular/router';
 import { LoginComponent } from './login/login';
 import { Forestillinger } from './forestillinger/forestillinger';
+import { ForestillingDetaljer } from './forestilling-detaljer/forestilling-detaljer';
 
 export const routes: Routes = [
   {
@@ -16,6 +16,10 @@ export const routes: Routes = [
   {
     path: 'forestillinger',
     component: Forestillinger,
+  },
+  {
+    path: 'forestilling-detaljer',
+    component: ForestillingDetaljer,
   },
   {
     path: '**',

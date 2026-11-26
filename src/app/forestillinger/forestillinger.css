@@ -33,6 +33,8 @@
   box-shadow: 0 15px 45px rgba(0, 0, 0, 0.45);
 }
 
+/* Header */
+
 .page-header {
   display: grid;
   grid-template-columns: 120px 1fr 100px;
@@ -69,11 +71,14 @@
   color: #f5e8d0;
   text-align: right;
   font-size: 15px;
+  text-decoration: none;
 }
 
-.forestiling-list {
-  margin-top: 30px;
+.admin-label:hover {
+  color: #f1cf86;
 }
+
+/* Forestilling list */
 
 .forestilling-list {
   display: grid;
@@ -96,6 +101,8 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Image */
+
 .image-placeholder {
   height: 120px;
   display: flex;
@@ -108,6 +115,8 @@
   font-size: 17px;
 }
 
+/* Description */
+
 .forestilling-card h3 {
   min-height: 45px;
   margin: 12px 0;
@@ -116,7 +125,11 @@
   font-weight: 600;
 }
 
-.forestilling-card button {
+/* Booking button */
+
+.forestilling-card .booking-button,
+.forestilling-card a.booking-button {
+  display: inline-block;
   align-self: flex-end;
   margin-top: auto;
   padding: 9px 15px;
@@ -126,15 +139,23 @@
   border: 1px solid #d4ad69;
   border-radius: 20px;
 
+  font-family: inherit;
   font-size: 13px;
   font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+
   cursor: pointer;
   transition: background 0.2s ease;
 }
 
-.forestilling-card button:hover {
+.forestilling-card .booking-button:hover {
   background: #e1bd78;
+  color: #26000c;
+  text-decoration: none;
 }
+
+/* Responsive */
 
 @media (max-width: 750px) {
   .forestilling-list {

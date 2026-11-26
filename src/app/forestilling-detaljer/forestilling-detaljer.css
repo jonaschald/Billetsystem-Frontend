@@ -1,0 +1,202 @@
+
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
+/* Main page */
+
+.detaljer-page {
+  min-height: 100vh;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('/theater-background.png') center / cover no-repeat;
+}
+
+/* Main panel */
+
+.detaljer-panel {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 680px;
+  box-sizing: border-box;
+  padding: 25px;
+  background: rgba(35, 0, 12, 0.94);
+  border: 2px solid #d4ad69;
+  border-radius: 5px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Header */
+
+.detaljer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 45px;
+}
+
+.back-link {
+  color: #f1cf86;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.back-link:hover {
+  color: #ffffff;
+}
+
+.theater-logo {
+  width: 170px;
+  height: 115px;
+  object-fit: cover;
+}
+
+/* Title */
+
+.forestilling-title {
+  color: #f1cf86;
+  font-size: 32px;
+  font-weight: 600;
+  margin: -70px 190px 30px 0;
+}
+
+/* Forestilling information */
+
+.forestilling-info {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 35px;
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+
+.forestilling-image {
+  min-height: 140px;
+  background: #f5e8d0;
+  border: 2px solid #d4ad69;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #23000c;
+  font-size: 18px;
+}
+
+.forestilling-description {
+  min-height: 140px;
+  padding: 15px;
+  box-sizing: border-box;
+  background: #f5e8d0;
+  border: 2px solid #d4ad69;
+  color: #23000c;
+}
+
+.forestilling-description h2 {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Performances table */
+
+.opfoerelser-section {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.opfoerelser-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #f5e8d0;
+  color: #23000c;
+}
+
+.opfoerelser-table th {
+  background: #c69b50;
+  color: #23000c;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #d4ad69;
+}
+
+.opfoerelser-table td {
+  height: 48px;
+  padding: 5px 12px;
+  border: 1px solid #d4ad69;
+}
+
+.opfoerelser-table th:first-child,
+.opfoerelser-table td:first-child {
+  width: 17%;
+}
+
+.opfoerelser-table th:nth-child(2),
+.opfoerelser-table td:nth-child(2) {
+  width: 57%;
+}
+
+.opfoerelser-table th:last-child,
+.opfoerelser-table td:last-child {
+  width: 26%;
+  text-align: center;
+}
+
+/* Booking button */
+
+.opfoerelser-table button {
+  background: #c69b50;
+  color: #23000c;
+  border: 1px solid #f1cf86;
+  padding: 5px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.opfoerelser-table button:hover {
+  background: #f1cf86;
+}
+
+/* Responsive */
+
+@media (max-width: 700px) {
+
+  .detaljer-page {
+    padding: 12px;
+    align-items: flex-start;
+  }
+
+  .detaljer-panel {
+    padding: 12px;
+    min-height: auto;
+  }
+
+  .detaljer-header {
+    align-items: center;
+  }
+
+  .theater-logo {
+    width: 110px;
+    height: auto;
+  }
+
+  .forestilling-title {
+    margin: 20px 0;
+    font-size: 25px;
+  }
+
+  .forestilling-info {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .opfoerelser-table {
+    min-width: 550px;
+  }
+}
