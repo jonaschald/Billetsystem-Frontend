@@ -1,0 +1,47 @@
+<div class="forestillinger-page">
+
+  <main class="forestillinger-panel">
+
+    <header class="page-header">
+
+      <div class="theater-logo">
+        <img src="/theater-logo.png" alt="Det Kongelige Lille Teater">
+      </div>
+
+      <h1>Forestillinger</h1>
+
+      <a routerLink="/login" class="admin-label">Admin</a>
+
+    </header>
+
+    <section class="forestilling-list">
+
+      @if (loading()) {
+        <p>Henter forestillinger...</p>
+      }
+
+      @if (error()) {
+        <p>{{ error() }}</p>
+      }
+
+      @for (forestilling of forestillinger(); track forestilling.id) {
+
+        <article class="forestilling-card">
+
+          <div class="image-placeholder">Billede</div>
+
+          <h3>{{ forestilling.titel }}</h3>
+
+          <p>{{ forestilling.kortBeskrivelse }}</p>
+
+          <button>Bestil billetter</button>
+
+        </article>
+
+      }
+
+    </section>
+
+  </main>
+
+</div>
